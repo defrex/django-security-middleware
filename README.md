@@ -5,7 +5,7 @@
 This is some middleware I use for my own projects. You're welcome to it if you'd
 like.
 
-#### SSLMiddleware
+#### SSL Middleware
 
 `security_middleware.middleware.SSLMiddleware`
 
@@ -15,7 +15,7 @@ the https version of the same URL. And two, it adds a
 
 It can be disabled with the `SSL_ENABLED` setting.
 
-#### ContentSecurityPolicyMiddleware
+#### Content Security Policy Middleware
 
 `security_middleware.middleware.ContentSecurityPolicyMiddleware`
 
@@ -32,13 +32,13 @@ The exact rules are governed in settings like so:
 and so forth. Don't forget items that need to be quoted in the header need to
 be double quoted in the setting `"'like this'"`.
 
-#### XSSProtectionMiddleware
+#### XSS Protection Middleware
 
 `security_middleware.middleware.XSSProtectionMiddleware`
 
 Adds the header `X-XSS-Protection: 1; mode=block` to all requests.
 
-#### NoSniffMiddleware
+#### No Sniff Middleware
 
 `security_middleware.middleware.NoSniffMiddleware`
 
