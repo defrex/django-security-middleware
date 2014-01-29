@@ -8,4 +8,4 @@ env:
 install:
   - pip install -q Django==$DJANGO_VERSION --use-mirrors
   - pip install -q -r requirements.txt --use-mirrors
-script: python manage.py test
+script: cd tests && python manage.py test
