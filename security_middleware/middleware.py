@@ -1,4 +1,6 @@
 
+from string import replace
+
 from django.http import HttpResponsePermanentRedirect
 from django.conf import settings
 
@@ -14,7 +16,8 @@ for key, values in CSP_HEADER.items():
 class SSLMiddleware(object):
     def process_request(self, request):
         if SSL_ENABLED and not request.is_secure():
-            return HttpResponsePermanentRedirect(request.build_absolute_uri())
+            url = replace(request.build_absolute_uri(), 'http://', 'https://')
+            return HttpResponsePermanentRedirect(url)
 
     def process_response(self, request, response):
         if SSL_ENABLED:
