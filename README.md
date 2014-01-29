@@ -30,7 +30,7 @@ The exact rules are governed in settings like so:
     }
 
 and so forth. Don't forget items that need to be quoted in the header need to
-be double quoted in the setting "'like this'".
+be double quoted in the setting `"'like this'"`.
 
 #### XSSProtectionMiddleware
 
