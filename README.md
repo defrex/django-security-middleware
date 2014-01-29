@@ -43,3 +43,5 @@ Adds the header `X-XSS-Protection: 1; mode=block` to all requests.
 `security_middleware.middleware.NoSniffMiddleware`
 
 Adds the header `X-Content-Type-Options: nosniff` to all requests.
+
+Tips welcome. :) [13q4ZK9BgR4ZhKq27KmkuaEkay1GBEoUuS](https://coinbase.com/checkouts/5235423fe479cfc415f33635f75212fe)
