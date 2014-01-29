@@ -15,7 +15,6 @@ class SecurityMiddlewareTestCase(TestCase):
         response = self.client.get('/')
 
         self.assertEqual(response.status_code, 200)
-
         self.assertTrue('Content-Security-Policy' in response)
         self.assertTrue("default-src 'none';" in response['Content-Security-Policy'])
 
@@ -23,7 +22,6 @@ class SecurityMiddlewareTestCase(TestCase):
         response = self.client.get('/')
 
         self.assertEqual(response.status_code, 200)
-
         self.assertTrue('X-XSS-Protection' in response)
         self.assertEqual(response['X-XSS-Protection'], '1; mode=block')
 
@@ -31,7 +29,6 @@ class SecurityMiddlewareTestCase(TestCase):
         response = self.client.get('/')
 
         self.assertEqual(response.status_code, 200)
-
         self.assertTrue('X-Content-Type-Options' in response)
         self.assertEqual(response['X-Content-Type-Options'], 'nosniff')
 
@@ -39,5 +36,4 @@ class SecurityMiddlewareTestCase(TestCase):
         response = self.client.get('/')
 
         self.assertEqual(response.status_code, 200)
-
         self.assertTrue('Strict-Transport-Security' in response)
